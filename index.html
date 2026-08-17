@@ -150,9 +150,9 @@
         .legal-container, .privacy-inner {
             max-width: 900px;
             margin: 0 auto;
-            font-size: 0.8rem;
+            font-size: 0.92rem;
             color: var(--info-gray);
-            line-height: 1.7;
+            line-height: 1.85;
         }
 
         .legal-grid {
@@ -181,27 +181,46 @@
         .footer-links a { color: #444; text-decoration: underline; text-underline-offset: 2px; }
 
         .privacy-inner h2 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #444;
-            margin: 24px 0 8px;
+            margin: 32px 0 12px;
             font-weight: 600;
         }
 
         .privacy-inner h2:first-of-type { margin-top: 0; }
 
         .privacy-inner p, .privacy-inner li {
-            font-size: 0.85rem;
-            margin-bottom: 8px;
+            font-size: inherit;
+        }
+
+        .privacy-inner p {
+            margin: 0 0 18px;
         }
 
         .privacy-inner ul {
-            padding-left: 1.2rem;
-            margin-bottom: 12px;
+            padding-left: 1.4rem;
+            margin: 0 0 22px;
+        }
+
+        .privacy-inner li {
+            margin-bottom: 10px;
+        }
+
+        .privacy-inner li:last-child {
+            margin-bottom: 0;
         }
 
         .privacy-meta {
-            font-size: 0.78rem;
-            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 18px;
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 28px !important;
+        }
+
+        .privacy-meta span {
+            display: inline-block;
         }
 
         .privacy-divider {
@@ -286,9 +305,9 @@
         <div class="privacy-inner">
             <h2 id="privacy-heading" style="font-size: 1.1rem; color: #333; margin-bottom: 12px;" data-i18n="privacy_title">개인정보 처리방침</h2>
             <p class="privacy-meta" data-i18n="privacy_meta_html"></p>
-            <div data-i18n="privacy_body_html"></div>
-            <hr class="privacy-divider">
-            <div data-i18n="privacy_body_en_html"></div>
+            <div class="privacy-body" data-i18n="privacy_body_html"></div>
+            <hr id="privacy-divider" class="privacy-divider">
+            <div class="privacy-body" data-i18n="privacy_body_en_html"></div>
         </div>
     </section>
 </main>
@@ -331,12 +350,12 @@
             contact_label: '이메일',
             contact: emailLink,
             covered_apps_label: '적용 앱',
-            covered_apps: '<li>아가미 : 물을 마셔요</li><li>휴우식 : 모바일 키보드 키링</li>',
+            covered_apps: '<li>아가미: 물을 마셔요</li><li>휴우식: 모바일 키보드 키링</li>',
             privacy_link: '개인정보 처리방침',
             privacy_title: '개인정보 처리방침',
-            privacy_meta_html: '시행일: 2026년 5월 21일 · Google Play 개발자명: Your_Jojo · 운영: 조조국제무역 (JGL / Jojo International Logistics) · 문의: ' + emailLink,
-            privacy_body_html: '<p>본 개인정보처리방침은 Google Play 개발자명 <strong>Your_Jojo</strong>가 배포하고 조조국제무역(JGL / Jojo International Logistics)이 운영하는 앱에 적용됩니다.</p><p>적용 앱: <strong>아가미 : 물을 마셔요</strong>, <strong>휴우식 : 모바일 키보드 키링</strong></p><p>조조국제무역(이하 “회사”)은 Google Play 등을 통해 제공하는 모바일 애플리케이션(이하 “앱”) 및 관련 서비스 이용 과정에서 이용자의 개인정보를 보호하기 위해 본 방침을 수립·공개합니다.</p><h2>1. 수집하는 개인정보</h2><ul><li>서비스 이용 기록, 기기 정보(OS·앱 버전), 오류 로그</li><li>앱 내 로컬 저장 데이터 — 대부분 기기 내 저장</li><li>문의 시 제공하는 이메일 및 문의 내용</li></ul><h2>2. 수집 목적</h2><ul><li>앱 기능 제공 및 서비스 개선</li><li>오류 분석 및 안정성 향상</li><li>이용자 문의 응대 및 법령 이행</li></ul><h2>3. 보유 기간</h2><p>목적 달성 후 지체 없이 파기하며, 법령에 따라 보관이 필요한 경우 해당 기간 동안 보관합니다.</p><h2>4. 제3자 제공</h2><p>원칙적으로 외부에 제공하지 않습니다. 서비스 제공을 위해 Google Play 등을 사용할 수 있습니다.</p><h2>5. 이용자 권리</h2><p>열람·정정·삭제·처리 정지를 요청할 수 있습니다.</p><h2>6. 아동</h2><p>만 13세 미만 아동을 대상으로 하지 않습니다.</p><h2>7. 변경</h2><p>변경 시 본 페이지에 게시합니다.</p>',
-            privacy_body_en_html: '<h2 style="font-size:1rem;color:#444;margin-bottom:8px;">Privacy Policy (English)</h2><p>This policy applies to Google Play apps published under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p>Covered apps: <strong>Agami : Drink Water</strong>, <strong>Hyuusik : Mobile Keyboard Keyring</strong></p><p>Contact ' + emailLink + ' for privacy requests. Not directed to children under 13.</p>',
+            privacy_meta_html: '<span>시행일: 2026년 5월 21일</span><span>Google Play 개발자명: Your_Jojo</span><span>운영: 조조국제무역 (JGL / Jojo International Logistics)</span><span>문의: ' + emailLink + '</span>',
+            privacy_body_html: '<p>본 개인정보 처리방침은 Google Play 개발자명 <strong>Your_Jojo</strong>로 배포되고, 조조국제무역(JGL / Jojo International Logistics)이 운영하는 앱에 적용됩니다.</p><p><strong>적용 앱</strong></p><ul class="privacy-app-list"><li><strong>아가미: 물을 마셔요</strong></li><li><strong>휴우식: 모바일 키보드 키링</strong></li></ul><p>조조국제무역(이하 “회사”)은 Google Play 등을 통해 제공하는 모바일 애플리케이션(이하 “앱”) 및 관련 서비스 이용 과정에서 이용자의 개인정보를 보호하기 위해 본 개인정보 처리방침을 수립·공개합니다.</p><h2>1. 수집하는 개인정보</h2><p>회사는 서비스 제공을 위해 다음 정보를 처리할 수 있습니다.</p><ul><li>서비스 이용 기록, 기기 정보(OS 및 앱 버전), 오류 로그</li><li>앱 내 로컬 저장 데이터(대부분 이용자의 기기에 저장)</li><li>문의 시 이용자가 제공하는 이메일 주소 및 문의 내용</li></ul><h2>2. 수집 및 이용 목적</h2><ul><li>앱 기능 제공 및 서비스 개선</li><li>오류 분석 및 안정성 향상</li><li>이용자 문의 응대 및 법령 준수</li></ul><h2>3. 보유 및 이용 기간</h2><p>개인정보는 수집·이용 목적이 달성되면 지체 없이 파기합니다. 다만 관계 법령에 따라 보관이 필요한 경우에는 해당 법정 보관 기간 동안 보관합니다.</p><h2>4. 개인정보의 제3자 제공</h2><p>회사는 원칙적으로 개인정보를 외부에 제공하지 않습니다. 다만 법령에 근거가 있거나 이용자의 동의가 있는 경우에는 예외로 합니다. 서비스 제공 과정에서 Google Play 등 플랫폼을 이용할 수 있습니다.</p><h2>5. 이용자의 권리</h2><p>이용자는 자신의 개인정보에 대해 열람·정정·삭제·처리정지를 요청할 수 있습니다. 관련 문의는 ' + emailLink + '로 보내주시기 바랍니다.</p><h2>6. 아동의 개인정보</h2><p>본 서비스는 만 13세 미만 아동을 대상으로 하지 않습니다.</p><h2>7. 개인정보 처리방침의 변경</h2><p>본 방침이 변경되는 경우 변경 내용을 본 페이지에 게시합니다.</p>',
+            privacy_body_en_html: '<h2>Privacy Policy (English)</h2><p>This policy applies to apps published on Google Play under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p><strong>Covered apps</strong></p><ul class="privacy-app-list"><li><strong>Agami: Drink Water</strong></li><li><strong>Hyuusik: Mobile Keyboard Keyring</strong></li></ul><h2>1. Information Collected</h2><p>We may process the following information to provide our services.</p><ul><li>Service usage records, device information (OS and app version), and error logs</li><li>Data stored locally in the app, mostly on the user device</li><li>Email address and inquiry details provided when contacting us</li></ul><h2>2. Purposes of Collection and Use</h2><ul><li>Providing app features and improving the service</li><li>Analyzing errors and improving stability</li><li>Responding to inquiries and complying with applicable law</li></ul><h2>3. Retention Period</h2><p>Personal information is destroyed without delay once the purpose of collection and use has been achieved. If retention is required by law, it is kept for the legally required period.</p><h2>4. Sharing with Third Parties</h2><p>We do not generally provide personal information to outside parties. Exceptions may apply when required by law or with user consent. We may use platforms such as Google Play to provide the service.</p><h2>5. User Rights</h2><p>Users may request access to, correction of, deletion of, or restriction of processing of their personal information. Please contact us at ' + emailLink + '.</p><h2>6. Children</h2><p>This service is not directed to children under 13.</p><h2>7. Changes to This Policy</h2><p>Any changes to this policy will be posted on this page.</p>',
             copyright: '© 2026 JGL — Jojo International Logistics. All rights reserved.'
         },
         en: {
@@ -368,11 +387,11 @@
             contact_label: 'Email',
             contact: emailLink,
             covered_apps_label: 'Covered apps',
-            covered_apps: '<li>Agami : Drink Water</li><li>Hyuusik : Mobile Keyboard Keyring</li>',
+            covered_apps: '<li>Agami: Drink Water</li><li>Hyuusik: Mobile Keyboard Keyring</li>',
             privacy_link: 'Privacy Policy',
             privacy_title: 'Privacy Policy',
             privacy_meta_html: 'Effective: May 21, 2026 · Google Play developer name: Your_Jojo · Operator: Jojo International Logistics (JGL) · Contact: ' + emailLink,
-            privacy_body_html: '<p>This policy applies to Google Play apps published under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p>Covered apps: <strong>Agami : Drink Water</strong>, <strong>Hyuusik : Mobile Keyboard Keyring</strong></p><p>Jojo International Logistics (“we”) protects personal information collected through mobile apps and related services.</p><h2>1. Information collected</h2><ul><li>Usage data, device information, crash logs</li><li>Locally stored app data on your device</li><li>Email when you contact support</li></ul><h2>2. Purposes</h2><p>Provide features, improve stability, respond to inquiries, comply with law.</p><h2>3. Retention</h2><p>Retained only as long as necessary.</p><h2>4. Sharing</h2><p>We do not sell personal data.</p><h2>5. Your rights</h2><p>Contact us via email for access, correction, or deletion.</p><h2>6. Children</h2><p>Not directed to children under 13.</p><h2>7. Changes</h2><p>Updates posted on this page.</p>',
+            privacy_body_html: '<p>This policy applies to apps published on Google Play under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p><strong>Covered apps</strong></p><ul class="privacy-app-list"><li><strong>Agami: Drink Water</strong></li><li><strong>Hyuusik: Mobile Keyboard Keyring</strong></li></ul><h2>1. Information Collected</h2><p>We may process the following information to provide our services.</p><ul><li>Service usage records, device information (OS and app version), and error logs</li><li>Data stored locally in the app, mostly on the user device</li><li>Email address and inquiry details provided when contacting us</li></ul><h2>2. Purposes of Collection and Use</h2><ul><li>Providing app features and improving the service</li><li>Analyzing errors and improving stability</li><li>Responding to inquiries and complying with applicable law</li></ul><h2>3. Retention Period</h2><p>Personal information is deleted without delay once the purpose of collection and use has been achieved. If retention is required by law, it is kept for the legally required period.</p><h2>4. Sharing with Third Parties</h2><p>We do not generally provide personal information to outside parties. Exceptions may apply when required by law or with user consent. We may use platforms such as Google Play to provide the service.</p><h2>5. User Rights</h2><p>Users may request access to, correction of, deletion of, or restriction of processing of their personal information. Please contact us at ' + emailLink + '.</p><h2>6. Children</h2><p>This service is not directed to children under 13.</p><h2>7. Changes to This Policy</h2><p>Any changes to this policy will be posted on this page.</p>',
             privacy_body_en_html: '',
             copyright: '© 2026 JGL — Jojo International Logistics. All rights reserved.'
         },
@@ -405,12 +424,12 @@
             contact_label: 'メール',
             contact: emailLink,
             covered_apps_label: '対象アプリ',
-            covered_apps: '<li>アガミ : 水を飲みましょう</li><li>ヒュウシク : モバイルキーボードキーリング</li>',
+            covered_apps: '<li>アガミ: 水を飲みましょう</li><li>ヒュウシク: モバイルキーボードキーリング</li>',
             privacy_link: 'プライバシーポリシー',
             privacy_title: 'プライバシーポリシー',
-            privacy_meta_html: '施行日: 2026年5月21日 · Google Play開発者名: Your_Jojo · 運営: Jojo国際物流 (JGL) · 連絡先: ' + emailLink,
-            privacy_body_html: '<p>本ポリシーは、Google Play開発者名 <strong>Your_Jojo</strong> で配信され、Jojo国際物流 (JGL) が運営するアプリに適用されます。</p><p>対象アプリ: <strong>アガミ : 水を飲みましょう</strong>、<strong>ヒュウシク : モバイルキーボードキーリング</strong></p><p>当社はGoogle Play等のアプリにおける個人情報保護のため本ポリシーを公開します。お問い合わせはメールで受け付けます。13歳未満を対象としません。</p>',
-            privacy_body_en_html: '<h2 style="font-size:1rem;color:#444;">Privacy Policy (English)</h2><p>This policy applies to Google Play apps published under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p>Covered apps: <strong>Agami : Drink Water</strong>, <strong>Hyuusik : Mobile Keyboard Keyring</strong></p><p>Contact ' + emailLink + '.</p>',
+            privacy_meta_html: '<span>施行日: 2026年5月21日</span><span>Google Play開発者名: Your_Jojo</span><span>運営: Jojo国際物流 (JGL)</span><span>連絡先: ' + emailLink + '</span>',
+            privacy_body_html: '<p>本プライバシーポリシーは、Google Play開発者名 <strong>Your_Jojo</strong> で配信され、Jojo国際物流 (JGL) が運営するアプリに適用されます。</p><p><strong>対象アプリ</strong></p><ul class="privacy-app-list"><li><strong>アガミ: 水を飲みましょう</strong></li><li><strong>ヒュウシク: モバイルキーボードキーリング</strong></li></ul><p>当社は、アプリおよび関連サービスの提供にあたり、利用者の個人情報を保護するため、本プライバシーポリシーを定め、公開します。</p><h2>1. 収集する情報</h2><p>サービスの提供にあたり、次の情報を取り扱う場合があります。</p><ul><li>サービスの利用記録、端末情報（OSおよびアプリのバージョン）、エラーログ</li><li>アプリ内に保存されるデータ（主に利用者の端末内に保存）</li><li>お問い合わせの際に提供されるメールアドレスおよび内容</li></ul><h2>2. 利用目的</h2><ul><li>アプリ機能の提供およびサービスの改善</li><li>エラーの分析および安定性の向上</li><li>お問い合わせへの対応および法令の遵守</li></ul><h2>3. 保存期間</h2><p>個人情報は、収集・利用目的の達成後、遅滞なく削除します。法令により保存が必要な場合は、法定期間中保管します。</p><h2>4. 第三者への提供</h2><p>当社は、原則として個人情報を第三者に提供しません。ただし、法令に基づく場合または利用者の同意がある場合は除きます。サービス提供のため、Google Playなどのプラットフォームを利用する場合があります。</p><h2>5. 利用者の権利</h2><p>利用者は、自身の個人情報の開示、訂正、削除または利用停止を請求できます。お問い合わせは ' + emailLink + ' までご連絡ください。</p><h2>6. お子さまについて</h2><p>本サービスは13歳未満のお子さまを対象としていません。</p><h2>7. ポリシーの変更</h2><p>本ポリシーを変更する場合は、このページに変更内容を掲載します。</p>',
+            privacy_body_en_html: '<h2>Privacy Policy (English)</h2><p>This policy applies to apps published on Google Play under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p><strong>Covered apps</strong></p><ul class="privacy-app-list"><li><strong>Agami: Drink Water</strong></li><li><strong>Hyuusik: Mobile Keyboard Keyring</strong></li></ul><h2>1. Information Collected</h2><p>We may process the following information to provide our services.</p><ul><li>Service usage records, device information (OS and app version), and error logs</li><li>Data stored locally in the app, mostly on the user device</li><li>Email address and inquiry details provided when contacting us</li></ul><h2>2. Purposes of Collection and Use</h2><ul><li>Providing app features and improving the service</li><li>Analyzing errors and improving stability</li><li>Responding to inquiries and complying with applicable law</li></ul><h2>3. Retention Period</h2><p>Personal information is deleted without delay once the purpose of collection and use has been achieved. If retention is required by law, it is kept for the legally required period.</p><h2>4. Sharing with Third Parties</h2><p>We do not generally provide personal information to outside parties. Exceptions may apply when required by law or with user consent. We may use platforms such as Google Play to provide the service.</p><h2>5. User Rights</h2><p>Users may request access to, correction of, deletion of, or restriction of processing of their personal information. Please contact us at ' + emailLink + '.</p><h2>6. Children</h2><p>This service is not directed to children under 13.</p><h2>7. Changes to This Policy</h2><p>Any changes to this policy will be posted on this page.</p>',
             copyright: '© 2026 JGL — Jojo International Logistics. All rights reserved.'
         },
         zh: {
@@ -442,17 +461,18 @@
             contact_label: '邮箱',
             contact: emailLink,
             covered_apps_label: '适用应用',
-            covered_apps: '<li>Agami : 喝水吧</li><li>Hyuusik : 手机键盘钥匙扣</li>',
+            covered_apps: '<li>Agami: 喝水吧</li><li>Hyuusik: 手机键盘钥匙扣</li>',
             privacy_link: '隐私政策',
             privacy_title: '隐私政策',
-            privacy_meta_html: '生效日期: 2026年5月21日 · Google Play 开发者名称: Your_Jojo · 运营: Jojo国际物流 (JGL) · 联系方式: ' + emailLink,
-            privacy_body_html: '<p>本政策适用于以 Google Play 开发者名称 <strong>Your_Jojo</strong> 发布，并由 Jojo国际物流 (JGL) 运营的应用。</p><p>适用应用: <strong>Agami : 喝水吧</strong>, <strong>Hyuusik : 手机键盘钥匙扣</strong></p><p>本公司为保护移动应用及相关服务中的个人信息而制定本政策。通过邮件受理咨询。不面向13岁以下儿童。</p>',
-            privacy_body_en_html: '<h2 style="font-size:1rem;color:#444;">Privacy Policy (English)</h2><p>This policy applies to Google Play apps published under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p>Covered apps: <strong>Agami : Drink Water</strong>, <strong>Hyuusik : Mobile Keyboard Keyring</strong></p><p>Contact ' + emailLink + '.</p>',
+            privacy_meta_html: '<span>生效日期: 2026年5月21日</span><span>Google Play 开发者名称: Your_Jojo</span><span>运营: Jojo国际物流 (JGL)</span><span>联系方式: ' + emailLink + '</span>',
+            privacy_body_html: '<p>本隐私政策适用于以 Google Play 开发者名称 <strong>Your_Jojo</strong> 发布，并由 Jojo国际物流 (JGL) 运营的应用。</p><p><strong>适用应用</strong></p><ul class="privacy-app-list"><li><strong>Agami: 喝水吧</strong></li><li><strong>Hyuusik: 手机键盘钥匙扣</strong></li></ul><p>本公司为保护移动应用及相关服务中的用户个人信息，制定并公开本隐私政策。</p><h2>1. 收集的信息</h2><p>为提供服务，我们可能会处理以下信息。</p><ul><li>服务使用记录、设备信息（操作系统及应用版本）和错误日志</li><li>应用内本地存储的数据（主要存储在用户设备中）</li><li>用户咨询时提供的电子邮件地址及咨询内容</li></ul><h2>2. 收集和使用目的</h2><ul><li>提供应用功能并改进服务</li><li>分析错误并提高稳定性</li><li>回复用户咨询并遵守适用法律</li></ul><h2>3. 保存期限</h2><p>达到收集和使用目的后，我们会立即删除个人信息。如法律要求保存，则在法定期限内保管。</p><h2>4. 向第三方提供</h2><p>原则上，我们不会向外部提供个人信息。但法律要求或取得用户同意的情况除外。为提供服务，我们可能会使用 Google Play 等平台。</p><h2>5. 用户权利</h2><p>用户可以请求查阅、更正、删除或限制处理其个人信息。如有疑问，请通过 ' + emailLink + ' 联系我们。</p><h2>6. 儿童信息</h2><p>本服务不面向 13 岁以下儿童。</p><h2>7. 政策变更</h2><p>如本政策发生变更，我们会在本页面发布变更内容。</p>',
+            privacy_body_en_html: '<h2>Privacy Policy (English)</h2><p>This policy applies to apps published on Google Play under the developer name <strong>Your_Jojo</strong> and operated by Jojo International Logistics (JGL).</p><p><strong>Covered apps</strong></p><ul class="privacy-app-list"><li><strong>Agami: Drink Water</strong></li><li><strong>Hyuusik: Mobile Keyboard Keyring</strong></li></ul><h2>1. Information Collected</h2><p>We may process the following information to provide our services.</p><ul><li>Service usage records, device information (OS and app version), and error logs</li><li>Data stored locally in the app, mostly on the user device</li><li>Email address and inquiry details provided when contacting us</li></ul><h2>2. Purposes of Collection and Use</h2><ul><li>Providing app features and improving the service</li><li>Analyzing errors and improving stability</li><li>Responding to inquiries and complying with applicable law</li></ul><h2>3. Retention Period</h2><p>Personal information is deleted without delay once the purpose of collection and use has been achieved. If retention is required by law, it is kept for the legally required period.</p><h2>4. Sharing with Third Parties</h2><p>We do not generally provide personal information to outside parties. Exceptions may apply when required by law or with user consent. We may use platforms such as Google Play to provide the service.</p><h2>5. User Rights</h2><p>Users may request access to, correction of, deletion of, or restriction of processing of their personal information. Please contact us at ' + emailLink + '.</p><h2>6. Children</h2><p>This service is not directed to children under 13.</p><h2>7. Changes to This Policy</h2><p>Any changes to this policy will be posted on this page.</p>',
             copyright: '© 2026 JGL — Jojo International Logistics. 版权所有。'
         }
     };
 
     const elementsWithI18n = document.querySelectorAll('[data-i18n]');
+    const privacyDivider = document.getElementById('privacy-divider');
 
     function setLanguage(lang) {
         if (!translations[lang]) return;
@@ -464,6 +484,7 @@
                 el.innerHTML = value;
             }
         });
+        privacyDivider.hidden = !translations[lang].privacy_body_en_html;
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
